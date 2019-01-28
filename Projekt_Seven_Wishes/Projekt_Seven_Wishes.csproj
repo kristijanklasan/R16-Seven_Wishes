@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1E9D21E6-E634-4B95-A7B0-92043546B510}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Projekt_Seven_Wishes</RootNamespace>
+    <AssemblyName>Projekt_Seven_Wishes</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.109.2\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Baza\BPKorisnik.cs" />
+    <Compile Include="Baza\BPLijepe_rijeci.cs" />
+    <Compile Include="Baza\BPLista_želja.cs" />
+    <Compile Include="Baza\BPMoj_dan.cs" />
+    <Compile Include="Baza\BPNapomena.cs" />
+    <Compile Include="Baza\BPPonude.cs" />
+    <Compile Include="Baza\DB_tablice.cs" />
+    <Compile Include="View\Dodavanje_rijeci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Dodavanje_rijeci.Designer.cs">
+      <DependentUpon>Dodavanje_rijeci.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Baza\Database.cs" />
+    <Compile Include="View\Dodaci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Dodaci.Designer.cs">
+      <DependentUpon>Dodaci.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dodavanje_napomene.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Dodavanje_napomene.Designer.cs">
+      <DependentUpon>Dodavanje_napomene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dodavanje_ponuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Dodavanje_ponuda.Designer.cs">
+      <DependentUpon>Dodavanje_ponuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Karta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Karta.Designer.cs">
+      <DependentUpon>Karta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Lijepe_rijeci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Lijepe_rijeci.Designer.cs">
+      <DependentUpon>Lijepe_rijeci.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Lista_želja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Lista_želja.Designer.cs">
+      <DependentUpon>Lista_želja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MKorisnik.cs" />
+    <Compile Include="Model\MLijepe_rijeci.cs" />
+    <Compile Include="Model\MLista_želja.cs" />
+    <Compile Include="Model\MMoj_dan.cs" />
+    <Compile Include="Model\MNapomena.cs" />
+    <Compile Include="Model\MPonude.cs" />
+    <Compile Include="View\Moj_dan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Moj_dan.Designer.cs">
+      <DependentUpon>Moj_dan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Napomena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Napomena.Designer.cs">
+      <DependentUpon>Napomena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ponude.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Ponude.Designer.cs">
+      <DependentUpon>Ponude.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Prijava.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Prijava.Designer.cs">
+      <DependentUpon>Prijava.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Prikaz_ponuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Prikaz_ponuda.Designer.cs">
+      <DependentUpon>Prikaz_ponuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Registracijacs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Registracijacs.Designer.cs">
+      <DependentUpon>Registracijacs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seven_WishesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Seven_WishesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\Seven_Wishes_izbornik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Seven_Wishes_izbornik.Designer.cs">
+      <DependentUpon>Seven_Wishes_izbornik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Traženje_ponude.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Traženje_ponude.Designer.cs">
+      <DependentUpon>Traženje_ponude.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\Dodavanje_rijeci.resx">
+      <DependentUpon>Dodavanje_rijeci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Dodaci.resx">
+      <DependentUpon>Dodaci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Dodavanje_napomene.resx">
+      <DependentUpon>Dodavanje_napomene.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Dodavanje_ponuda.resx">
+      <DependentUpon>Dodavanje_ponuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Karta.resx">
+      <DependentUpon>Karta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Lijepe_rijeci.resx">
+      <DependentUpon>Lijepe_rijeci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Lista_želja.resx">
+      <DependentUpon>Lista_želja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Moj_dan.resx">
+      <DependentUpon>Moj_dan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Napomena.resx">
+      <DependentUpon>Napomena.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Ponude.resx">
+      <DependentUpon>Ponude.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Prijava.resx">
+      <DependentUpon>Prijava.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Prikaz_ponuda.resx">
+      <DependentUpon>Prikaz_ponuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Registracijacs.resx">
+      <DependentUpon>Registracijacs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Seven_Wishes_izbornik.resx">
+      <DependentUpon>Seven_Wishes_izbornik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Traženje_ponude.resx">
+      <DependentUpon>Traženje_ponude.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Seven_WishesDataSet.xsc">
+      <DependentUpon>Seven_WishesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Seven_WishesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Seven_WishesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Seven_WishesDataSet.xss">
+      <DependentUpon>Seven_WishesDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prijava.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arena_izbornik.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arena_slika.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arena_nova slika.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pocetna_slika.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\44753992_249721362566796_8733247767947771904_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5895d3becba9841eabab6082.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moj_dan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\slika-uljanik.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\izbornik_novo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ponuda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s-1-0279.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man-sitting-searching-online-job-with-a-laptop.png" />
+    <None Include="Resources\slika.png" />
+    <None Include="Resources\add-button-hi.png" />
+    <None Include="Resources\delete_button.png" />
+    <None Include="Resources\play-button_318-42541.jpg" />
+    <None Include="Resources\pause.png" />
+    <None Include="Resources\stopp.png" />
+    <None Include="Resources\lista želja .png" />
+    <None Include="Resources\DSC_0153.jpg" />
+    <None Include="Resources\pula-0-1.jpg" />
+    <None Include="Resources\zvijezda.jpg" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\pula po noci.jpg" />
+    <None Include="Resources\green-ribbon-banner-clipart-1.jpg" />
+    <None Include="Resources\Magnifying_Glass-512.png" />
+    <None Include="Resources\arena 10.jpg" />
+    <None Include="Resources\kisspng-thought-speech-balloon-clip-art-thinking-cloud-cliparts-5a8a55d44bcb27.1092876215190153803105.png" />
+    <None Include="Resources\Pozadina_trazenje_ponude1.png" />
+    <None Include="Resources\1. pocetna_slika.png" />
+    <None Include="Resources\napomena.png" />
+    <None Include="Resources\disketa.png" />
+    <None Include="Resources\dodaci_pozadina.png" />
+    <None Include="Resources\karta.png" />
+    <None Include="Resources\words.png" />
+    <None Include="Resources\word.png" />
+    <None Include="Resources\želja_wish.gif" />
+    <None Include="Resources\words1.png" />
+    <None Include="Resources\rijeci.jpg" />
+    <None Include="Resources\akvarij.jpg" />
+    <None Include="Resources\akvarij1.jpg" />
+    <None Include="Resources\karta.jpg" />
+    <None Include="Resources\karta1.jpg" />
+    <None Include="Resources\location.png" />
+    <None Include="Resources\nova_godina.jpg" />
+    <None Include="Resources\50240816_1182496841928493_5367201852767076352_n.jpg" />
+    <None Include="Resources\aaa.jpg" />
+    <None Include="Resources\see.png" />
+    <Content Include="Seven_Wishes.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Seven_Wishes_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Seven_Wishes.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.109.2\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.109.2\build\net46\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.109.2\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.109.2\build\net46\System.Data.SQLite.Core.targets'))" />
+  </Target>
+</Project>
